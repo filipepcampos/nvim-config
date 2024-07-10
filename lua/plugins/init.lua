@@ -19,32 +19,8 @@ return {
       vim.g.vimtex_view_method = 'zathura'
     end,
   },
-  -- These are some examples, uncomment them if you want to see them work!
-  {
-  "neovim/nvim-lspconfig",
-   config = function()
-   require("nvchad.configs.lspconfig").defaults()
-   require "configs.lspconfig"
-   require'lspconfig'.terraformls.setup{}
-      vim.api.nvim_create_autocmd({"BufWritePre"}, {
-        pattern = {"*.tf", "*.tfvars"},
-        callback = function()
-          vim.lsp.buf.format()
-        end,
-      })
-   end,
-  },
-  --
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
-  --
+
+  -- treesitter
   {
    	"nvim-treesitter/nvim-treesitter",
    	opts = {
