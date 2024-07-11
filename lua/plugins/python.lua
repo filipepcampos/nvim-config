@@ -21,6 +21,9 @@ return {
     "mfussenegger/nvim-dap",
   },
   {
+    "jose-elias-alvarez/null-ls.nvim",
+  },
+  {
     "mfussenegger/nvim-dap-python",
     ft = "python",
     dependencies = {
